@@ -18,6 +18,7 @@ body {
   background-color:  hsl(275, 32%, 28%);
   color: hsl(275, 60%, 95%);
   display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
   grid-template-rows: auto auto auto auto auto;
   gap: 1.25em;
   overflow-x: hidden;
@@ -200,5 +201,49 @@ section#contact p {
 section#contact a{
   color: hsl(173, 100%, 39%) !important;
   font-weight: bold;
+
+}
+
+@media (min-width: 426px) {
+  header {
+    grid-column: col-start 1 / span 12;
+  }
+  section#about {
+    grid-column: col-start 1 / span 12;
+    padding: 1.25em;
+  }
+  section#projects {
+    display: grid;
+    grid-column: col-start 1 / span 12;
+    grid-template-columns: repeat(6, [col-start] 1fr);
+    grid-template-rows: 1fr auto auto;
+    gap: 1.25em;
+    align-items: center;
+    justify-content: center;
+  }
+  section#projects .pro_card {
+    width: 50vw;
+    height: 60vw;
+  }
+  section#projects > h1 {
+    grid-column: col-start 3 / span 2;
+    grid-row: 1;
+  }
+  section#projects .pro_card#hub {
+    grid-column: col-start 1 / span 6;
+    grid-row: 2;
+  }
+  section#projects .pro_card#loading {
+    grid-column: col-start 4 / span 3;
+    grid-row: 2;
+  }
+  section#projects .pro_card#portoflio {
+    grid-column: col-start 1 /span 3;
+    grid-row: 3;
+  }
+  section#projects
+  section#contact {
+    grid-column: col-start 1 / span 12;
+  }
 
 }
