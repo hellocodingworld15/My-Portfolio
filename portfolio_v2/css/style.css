@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  overflow: hidden;
   margin: 0;
   padding: 0;
 }
@@ -201,4 +202,5 @@ section#contact p {
 section#contact a{
   color: hsl(173, 100%, 39%) !important;
   font-weight: bold;
+
 }
