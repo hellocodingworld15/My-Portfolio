@@ -34,6 +34,7 @@ body {
 /*Name&job*/
 header {
   display: block;
+  width:100%;
   text-align: center;
   white-space: nowrap;
   position: absolute;
@@ -204,3 +205,4 @@ section#contact a{
   font-weight: bold;
 
 }
+
