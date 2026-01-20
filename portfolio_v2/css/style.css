@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a:link {
+  color: hsl(275, 60%, 95%);
+  text-decoration: none;
+}
+a:visited {
+  color: hsl(275, 60%, 95%);
+  text-decoration: none;
+}
+
+body {
+  position: relative;
+  background-color:  hsl(275, 32%, 28%);
+  color: hsl(275, 60%, 95%);
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 1.25em;
+}
+
+
+/*
+  main colors:
+  hsl(275, 32%, 28%) 60%
+  hsl(274, 23%, 32%) / hsl(275, 28%, 44%) 30%
+  hsl(275, 60%, 95%) / hsl(173, 100%, 39%) 10%
+*/
+
+
+/*Name&job*/
+header {
+  display: block;
+  text-align: center;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 4em;
+  font-family: 'JetBrains Mono', Lexed, Arial;
+  grid-row: 1;
+}
+/*job animation*/
+header  h2.job{
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-kerning: none;
+  letter-spacing: 0.15em;
+  margin: 0 auto;
+  padding: 0;
+  border-right: 0.15em solid hsl(0, 0%, 0%);
+  animation:
+    typing 4s steps(19, end),
+    blinking 0.75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes blinking {
+  from, to {border-color: transparent}
+  50% {border-color: black}
+}
+
+/*nav bar*/
+nav {
+  font-family: "Racing Sans One", "JetBrains Mono", Arial;
+  width: 25vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: 1em;
+  z-index: 999;
+}
+nav .nav_bar_i {
+  position: absolute;
+  top: 0.5em;
+  left: 1.25em;
+}
+nav .hidden {
+  display: none;
+  list-style: none;
+}
+nav #toggle {
+  transform: scale(4.1);
+  position: absolute;
+  top: 1.95em;
+  z-index: 999;
+  opacity: 0;
+}
+nav:has(#toggle:checked) ul.hidden {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 4em;
+  animation: fade_in 0.75s ease-in;
+}
+@keyframes fade_in {
+  from {opacity: 0}
+  to {opacity: 100%}
+}
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 6em;
+  background-color: hsl(274, 23%, 32%);
+  border: 1px solid hsl(275, 60%, 95%);
+}
+nav li#first {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+}
+nav li#last {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+nav a:link {
+  /* color: hsl(101, 71%, 90%); */
+  color: hsl(275, 60%, 95%);
+  text-decoration: none;
+}
+nav a:visited {
+  /* color: hsl(101, 71%, 90%); */
+  color: hsl(275, 60%, 95%);
+  text-decoration: none;
+}
+/*about me*/
+section#about {
+  grid-row: 2;
+  margin-top: 35vh;
+  padding: 1em;
+  text-align: center;
+}
+section#about h1 {
+  font-family: "JetBrains Mono", Lexed, Arial;
+}
+section#about p {
+  font-family: Lexed, "JetBrains Mono", Arial;
+}
+/*projects*/
+section#projects {
+  grid-row: 3;
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25em;
+}
+section#projects h1 {
+  font-family: "JetBrains Mono", Lexed, Arial;
+  text-align: center;
+  padding: 1em;
+}
+section.pro_card {
+  width: 80vw;
+  border: 3px solid hsl(275, 28%, 44%);;
+  background-color: hsl(274, 23%, 32%);
+}
+section.pro_card img {
+  width: 100%;
+}
+section.pro_card h3 {
+  font-family: "JetBrains Mono", Lexed, Arial;
+  text-align: center;
+  padding: 0.5em;
+  
+}
+section.pro_card p {
+  font-family: Lexed, "JetBrains Mono", Arial;
+  text-align: center;
+  padding: 0.75em;
+}
+section.pro_card a#tutorial {
+  color: hsl(173, 100%, 39%) !important;
+  font-weight: bold;
+}
+/*contact*/
+section#contact {
+  grid-row: 4;
+  margin-top: 10vh;
+  text-align: center;
+  padding: 1.25em;
+}
+section#contact h1 {
+  font-family: "JetBrains Mono", Lexed, Arial;
+  padding: 0.75em;
+  white-space: nowrap;
+}
+section#contact p {
+  font-family: Lexed, "JetBrains Mono", Arial;
+}
+section#contact a{
+  color: hsl(173, 100%, 39%) !important;
+  font-weight: bold;
+}

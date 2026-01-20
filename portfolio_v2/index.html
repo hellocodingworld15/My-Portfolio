@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maor Yevtushenko's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lexend:wght@100..900&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    <!--
+    JetBrains Mono is for heading&titles
+    Lexed is for p and text
+    Racing Sans One is for nav/buttons
+    Arial is backup
+  -->
+  <script src="https://kit.fontawesome.com/cf8652e591.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="toggle">
+    <div class="nav_bar_i">
+      <i class="fa-solid fa-bars fa-3x" style="color: hsl(275, 28%, 44%);"></i>
+    </div>
+    <ul class="hidden">
+      <li id="first"><a href="#name&job" title="jump to my name and job">Name&Job</a></li>
+      <li><a href="#about" title="jump to about me">About</a></li>
+      <li><a href="#projects" title="jump to my projects">Projects</a></li>
+      <li id="last"><a href="#contact" title="jump to how to contact me">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="name&job">
+    <h1 class="name">Maor Yevtushenko</h1>
+    <h2 class="job">Front-end developer</h2>
+  </header>
+  
+  <section id="about">
+    <h1>About Me</h1>
+    <p>
+      I’m a developer who thrives on learning new things.
+      Since writing my first line of code, I’ve been obsessed with the ever-evolving world of web technologies.
+      Currently, I’m deep-diving into css's full potential and exploring the possibilities of modern CSS animations.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h1>My Projects</h1>
+    <section class="pro_card">
+      <a href="projects/project_1_hub/index.html" title="move to my hub">
+        <img src="images/projects_1_img.png" alt="TF2 image" width="300em">
+        <h3>WeMakeGoodTeam's Hub</h3>
+        <p>
+          My first project, at the time I only knew basic html and some css.
+          This website was ment to train me to using html correctly.<br></br>
+          *This projects wasn't made to be responsive, so on mobile it will look weird*
+        </p>
+      </a>
+    </section>
+    <section class="pro_card">
+      <a href="projects/project_2_loading_screen/index.html" title="move to the loading screen">
+        <img src="images/projects_2_img.jpg" alt="loading screen image" width="300em">
+        <h3>Loading Screen</h3>
+        <p>
+          My first project that used actual css and css animation.
+          I had insperation for this project from this tutorial:
+          <a href="https://www.freecodecamp.org/news/how-to-build-a-delightful-loading-screen-in-5-minutes-847991da509f" title="move to the tutorial" id="tutorial">
+            freecodecamp - how to build a delightful loading screen in 5 min
+          </a><br>
+          *This projects wasn't made to be responsive, so on mobile it will look weird*
+        </p>
+      </a>
+    </section>
+    <section class="pro_card">
+      <a href="index.html" title="move to my portfolio, also known as this webpage">
+        <img src="images/projects_3_img.png" alt="loading screen image" width="300em">
+        <h3>My Portfolio</h3>
+        <p>
+          This projects is... This webpage you are using currently!
+          This is my first webpage that is made to be responsive.
+          *This projects was made to be responsive*
+        </p>
+      </a>
+    </section>
+  </section>
+
+  <section id="contact">
+    <h1>How To Contact Me</h1>
+    <p>
+      You can contact me via email: <a href="mailto: hellocodingworld15@gmail.com">hellocodingworld15@gmail.com</a><br>
+      *I live in Israel so the time zone for is UTC+2, so please note that I might no be avalible all the time*<br>
+      You can contact me via discord: <a href="https://discord.com/users/1463032039853916226">hellocoding.</a>
+    </p>
+  </section>
+
+  
+</body>
+</html>
