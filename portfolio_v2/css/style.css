@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  overflowX: hidden;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -205,5 +205,6 @@ section#contact a{
   font-weight: bold;
 
 }
+
 
 
