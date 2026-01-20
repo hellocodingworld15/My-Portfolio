@@ -18,7 +18,7 @@ body {
   background-color:  hsl(275, 32%, 28%);
   color: hsl(275, 60%, 95%);
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: 1.25em;
   overflow-x: hidden;
   overflow-y: auto;
@@ -36,20 +36,17 @@ body {
 /*Name&job*/
 header {
   display: block;
-  width:100%;
   text-align: center;
-  white-space: nowrap;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
   padding-top: 4em;
   font-family: 'JetBrains Mono', Lexed, Arial;
-  grid-row: 1;
+  grid-row: 2;
 }
 /*job animation*/
 header  h2.job{
   display: block;
-  width: 100%;
+  width: 24ch; 
+  font-size: 1em; 
   overflow: hidden;
   white-space: nowrap;
   font-kerning: none;
@@ -58,12 +55,12 @@ header  h2.job{
   padding: 0;
   border-right: 0.15em solid hsl(0, 0%, 0%);
   animation:
-    typing 4s steps(19, end),
-    blinking 0.75s step-end infinite;
+    typing 4s steps(19, end) forwards,
+    blinking 1s step-end infinite;
 }
 @keyframes typing {
     from { width: 0 }
-    to { width: 100% }
+    to { width: 24ch}
 }
 @keyframes blinking {
   from, to {border-color: transparent}
@@ -72,15 +69,13 @@ header  h2.job{
 
 /*nav bar*/
 nav {
-  font-family: "Racing Sans One", "JetBrains Mono", Arial;
-  width: 25vw;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+font-family: "Racing Sans One", "JetBrains Mono", Arial;
+  width: 100%; 
+  height: 0;
   position: sticky;
   top: 1em;
   z-index: 999;
+  grid-row: 1;
 }
 nav .nav_bar_i {
   position: absolute;
@@ -139,7 +134,7 @@ nav a:visited {
 }
 /*about me*/
 section#about {
-  grid-row: 2;
+  grid-row: 3;
   margin-top: 35vh;
   padding: 1em;
   text-align: center;
@@ -152,7 +147,7 @@ section#about p {
 }
 /*projects*/
 section#projects {
-  grid-row: 3;
+  grid-row: 4;
   margin-top: 15vh;
   display: flex;
   flex-direction: column;
@@ -189,7 +184,7 @@ section.pro_card a#tutorial {
 }
 /*contact*/
 section#contact {
-  grid-row: 4;
+  grid-row: 5;
   margin-top: 10vh;
   text-align: center;
   padding: 1.25em;
@@ -207,8 +202,3 @@ section#contact a{
   font-weight: bold;
 
 }
-
-
-
-
-
