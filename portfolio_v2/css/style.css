@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: auto;
   margin: 0;
   padding: 0;
 }
@@ -205,6 +206,7 @@ section#contact a{
   font-weight: bold;
 
 }
+
 
 
 
